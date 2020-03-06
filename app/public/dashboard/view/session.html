@@ -1,0 +1,70 @@
+<div class="row">
+	<div class="col-lg-6">
+		<table class="table table-striped table-hover table-condensed table-responsive">
+			<caption>
+				{{ captions.session }}
+			</caption>
+			<thead>
+				<tr>
+					<td colspan="99">
+						<span data-ng-if="!rows.length">No rows</span>
+						<div pagination-rows="pagination.rows" all-rows="rows" pagination-controls></div>
+					</td>
+				</tr>
+				<tr>
+					<th>ID</th>
+					<th>IP Address</th>
+					<th>User Agent</th>
+					<th>Created</th>
+					<th>Options</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr data-ng-repeat="row in pagination.rows.itemsShow" data-id="{{ row.id }}">
+					<td>{{ row.id }}</td>
+					<td>{{ row.remoteIp }}</td>
+					<td class="hide-overflow">{{ row.userAgent }}</td>
+					<td>{{ row.createdAt | date:dateFormat }}</td>
+					<td><a data-ng-href="#/session/SessionId/{{ row.id }}" class="btn btn-primary btn-xs">View Logs</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="col-lg-6">
+		<table class="table table-striped table-hover table-condensed table-responsive">
+			<caption>
+				Logs for Session ID: {{ sessionLogsSessionId || '-' }}
+			</caption>
+			<thead>
+				<tr>
+					<td colspan="99">
+						<div pagination-rows="pagination.sessionLogsSession" all-rows="sessionLogsSession" pagination-controls></div>
+					</td>
+				</tr>
+				<tr>
+					<th>ID</th>
+					<th>SID</th>
+					<th>Type</th>
+					<th>Group</th>
+					<th>Data</th>
+					<th>Created</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="99" data-ng-if="!sessionLogsSession.length">
+						<span>No session selected</span>
+					</td>
+				</tr>
+				<tr data-ng-repeat="row in pagination.sessionLogsSession.itemsShow">
+					<td>{{ row.id }}</td>
+					<td>{{ row.SessionId }}</td>
+					<td>{{ row.eventType }}</td>
+					<td>{{ row.eventGroup }}</td>
+					<td class="hide-overflow">{{ row.data }}</td>
+					<td>{{ row.createdAt | date:dateFormat }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

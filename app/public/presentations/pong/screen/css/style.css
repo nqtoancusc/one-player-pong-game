@@ -1,0 +1,236 @@
+html {
+    height: 100%;
+    background: black url(/presentations/pong/screen/images/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+body {
+    font-family: "Times New Roman", Georgia, Serif;
+    font-size: 1em/1.5;
+    color: #000;
+    background: none;
+    color: white;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+h1 {
+    margin: 10px;
+    color: #000;
+    text-align: center;
+}
+
+#notify {
+    color: #fff;
+    font-size: 2em;
+    /*position: absolute;
+    left: 48%;*/
+    overflow: hidden;
+    text-align: center;
+}
+
+#pongCanvas {
+    -webkit-transform: rotateZ(90deg) translate(-50px, 0);
+    transform: rotateZ(90deg) translate(-50px, 0);
+    margin-top: -80px;   /*Canvas height increase 186 pixels from 420 to 792. So margin-top needs to be changed to -186px/2 */
+}
+
+#canvas-wrapper {
+    background: url(/presentations/pong/screen/images/footballField.png) no-repeat center;
+    background-size: 100%;
+    width: 852px;
+    height: 532px;
+    margin: auto;
+    text-align: center;
+}    
+
+#countries {
+    width: 540px;
+    margin: auto;
+}
+
+#main {
+    overflow: hidden;
+    outline: 1px solid white;
+    position: relative;
+    background: #ffffff;
+    width: 1920px;
+    height: 1080px;
+    margin: auto;
+}
+
+#main > .row > div {
+    height: 360px;
+    padding: 0;
+    text-align: center;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.qr-code {
+    color: #000;
+}
+
+#qr-remote {
+    color: #000;
+    padding: 0;
+    text-align: center;
+    width: 924px;
+    margin: 0 auto;
+}
+#qr-remote h2 {
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+#qr-remote .row > div {
+    padding: 0 30px;
+}
+#qr-remote .row > div > div {
+    background: url(/presentations/pong/screen/images/PELI-KOODI.png) no-repeat center;
+    min-height: 246px;
+}
+.qr-code-wrapper {
+
+}
+.qr-code-inuse {
+
+}
+.qr-code > div {
+    margin: 0 auto;
+}
+.qr-code-inuse {
+    font-size: 25px;
+}
+#qr-remote .qr-code-inuse .content-box {
+    font-size: 30px;
+    padding: 45px 40px 0;
+}
+.qr-code-img {
+    width: 180px;
+    height: 180px;
+    margin: auto;
+}
+.qr-code-img img {
+    width: 100%;
+    height: 100%;
+}
+.qr-code-desc {
+    font-size: 27px;
+}
+.qr-code-url {
+    font-size: 26px;
+    margin-top: 10px;
+}
+.qr-code-token {
+    font-size: 70px;
+    line-height: 70px;
+}
+.qr-code-token-desc {
+    font-size: 47px;
+    font-weight: bold;
+    color: #09743b;
+    text-shadow: 2px 3px 2px #bbb;
+}
+
+#timer {
+    color: #fff;
+    font-weight: bold;
+    font-size: 47px;
+}
+
+#scoreHome {
+    background: url(/presentations/pong/screen/images/score1.png) no-repeat center;
+    background-size: 80%;
+    height: 102px;
+    margin-top: 40px;
+    padding: 22px 62px 0 0;
+    font-size: 47px;
+    text-align: right;
+    color: #0c743c;
+}
+
+#scoreAway {
+    background: url(/presentations/pong/screen/images/score2.png) no-repeat center;
+    background-size: 80%;
+    height: 102px;
+    margin-top: 40px;
+    padding: 22px 0 0 62px;
+    font-size: 47px;
+    text-align: left;
+    color: #0c743c;
+}
+
+#video-box {
+    -webkit-transition: height 1s ease-in-out;
+    transition: height 1s ease-in-out;
+    padding: 0;
+    margin: 0 auto;
+    height: 360px;
+    background: #315c85 no-repeat center;
+    text-align: center;
+}
+#video-box.fullscreen {
+    height: 1080px;
+}
+
+#videoPlayer {
+    -webkit-transition: opacity .3s ease-in-out;
+    transition:         opacity .3s ease-in-out;
+    height: 100%;
+    opacity: 1.0;
+}
+
+#videoPlayer.swapping {
+    opacity: 0;
+}
+
+#bottom-tab-wrapper {
+    -webkit-transition: height .4s ease-in-out;
+    transition: height .4s ease-in-out;
+    background: transparent url(/presentations/pong/screen/images/phone-tab.png) no-repeat bottom center;
+    margin: auto;
+    width: 360px;
+    height: 20px;
+}
+#bottom-tab {
+    height: 100%;
+    overflow: hidden;
+}
+#bottom-tab > div {
+    display: inline-block;
+}
+
+#bottom-tab-wrapper.open {
+    height: 360px;
+}
+.blue-shade-bg {
+    background: transparent url(/presentations/pong/screen/images/blue-shade-bg.png) repeat-x;
+}
+
+.shadow {
+    -webkit-box-shadow: 0px 30px 150px 0px rgba(0, 0, 0, 0.3);
+    box-shadow:         0px 30px 150px 0px rgba(0, 0, 0, 0.3);
+}
+
+.rounded-box {
+    -webkit-border-radius:  20px;
+    border-radius:          20px;
+}
+
+.rounded-box-small {
+    -webkit-border-radius:  5px;
+    border-radius:          5px;
+}
+
+.padded-box {
+    padding: 10px;
+    min-height: 340px;
+}

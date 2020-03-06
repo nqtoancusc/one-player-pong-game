@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pelaa fudista ja voita liput</title>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<!-- build:style pong_remote -->
+	{% for path in include.remote.css %}
+	<link type="text/css" rel="stylesheet" href="/{{ path }}" />
+	{%- endfor %}
+	<!-- /build -->
+	{% block head %}
+	{% endblock %}
+</head>
+<body>
+	<div id="content-wrapper">
+		<div id="controls" data-action="pong" class="controls-group">
+			<div id="header">
+				{% block headerExtra %}
+				{% endblock %}
+			</div>
+			<div id="body">
+				{% block body %}
+				{% endblock %}
+			</div>
+		</div>
+	</div>
+</body>
+</html>

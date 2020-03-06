@@ -1,0 +1,128 @@
+<div class="row" data-ng-controller="Overviews">
+	<div class="col-sm-4">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h3 class="panel-title"><span class="glyphicon glyphicon-phone"></span> Remote Origins</h3>
+			</div>
+			<div class="panel-body">
+				<table class="table table-condensed table-bordered last-col-numbers">
+					<thead>
+						<tr>
+							<th>Origin</th>
+							<th>Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><span class="glyphicon glyphicon-qrcode"></span> QR-Code</td>
+							<td>{{ remoteOrigins['QR-CODE'] || 0}}</td>
+						</tr>
+						<tr>
+							<td><span class="glyphicon glyphicon-tag"></span> NFC</td>
+							<td>{{ remoteOrigins['NFC'] || 0}}</td>
+						</tr>
+						<tr>
+							<td><span class="glyphicon glyphicon-font"></span> Input Code</td>
+							<td>{{ remoteOrigins['FORM'] || 0}}</td>
+						</tr>
+						<tr>
+							<td><span class="glyphicon glyphicon-question-sign"></span> Unknown</td>
+							<td>{{ remoteOrigins['UNKNOWN'] || 0}}</td>
+						</tr>
+						<tr>
+							<td colspan="2">Total: <strong>{{ remoteOrigins['TOTAL'] || 0}}</strong></td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="text-info"><strong>Origin</strong> is the source action that lead to opening the controller interface.</p>
+				<p class="text-info"><strong>NFC</strong> tag opens the Input Code view, but counts as 'NFC' if the code is entered.</p>
+				<p class="text-info"><strong>Unknown</strong> origin means the request URL already contained the token, or the origin could not be recognized.</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h3 class="panel-title"><span class="glyphicon glyphicon-user"></span> Users and Sessions</h3>
+			</div>
+			<div class="panel-body">
+				<table class="table table-condensed table-bordered last-col-numbers">
+					<thead>
+						<tr>
+							<th>Type</th>
+							<th>Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Unique users</td>
+							<td>{{ userSessions.uniques || 0}}</td>
+						</tr>
+						<tr>
+							<td>Sessions</td>
+							<td>{{ userSessions.sessions || 0}}</td>
+						</tr>
+						<tr>
+							<td>Views</td>
+							<td>{{ userSessions.views || 0}}</td>
+						</tr>
+						<tr>
+							<td>Actions</td>
+							<td>{{ userSessions.actions || 0}}</td>
+						</tr>
+						<tr>
+							<td colspan="2"><strong>Average</strong></td>
+						</tr>
+						<tr>
+							<td>Sessions/Unique</td>
+							<td>{{ userSessions.avgSessions || 0}}</td>
+						</tr>
+						<tr>
+							<td>Views/Session</td>
+							<td>{{ userSessions.avgSessions || 0}}</td>
+						</tr>
+						<tr>
+							<td>Actions/View</td>
+							<td>{{ userSessions.avgActions || 0}}</td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="text-info"><strong>Unique user</strong> is identified by a persistent cookie.</p>
+				<p class="text-info"><strong>Session</strong> lasts as long as the browser window is open.</p>
+				<p class="text-info"><strong>View</strong> starts when Remote interface reports ready.</p>
+				<p class="text-info"><strong>Action</strong> is a Remote interface button press, or other action .</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h3 class="panel-title"><span class="glyphicon glyphicon-stats"></span> Server Statistics</h3>
+			</div>
+			<div class="panel-body">
+				<table class="table table-condensed table-bordered">
+					<thead>
+						<tr>
+							<th>Property</th>
+							<th>Value</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Uptime</td>
+							<td>{{ serverStats.uptime || 0}}</td>
+						</tr>
+						<tr>
+							<td>Times Restarted</td>
+							<td>{{ userSessions.restarts || 0}}</td>
+						</tr>
+						<tr>
+							<td>Screens Started</td>
+							<td>{{ userSessions.screens || 0}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

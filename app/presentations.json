@@ -1,0 +1,21 @@
+{
+	"defaultScheme": "pong",
+	"presentations": [
+		{
+			"scheme": "pong",
+			"token": "pong"
+		},
+		{
+			"scheme": "pong",
+			"token": "pong2"
+		},
+		{
+			"scheme": "pong",
+			"token": "pong3"
+		},
+		{
+			"scheme": "pong",
+			"token": "pong4"
+		}
+	]
+}

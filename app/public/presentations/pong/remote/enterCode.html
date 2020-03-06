@@ -1,0 +1,54 @@
+{% extends 'index.html' %}
+{% block offbtn %}
+{% endblock %}
+{% block body %}
+	{% if validationErrors.code %}
+		<div id="message">
+		    <div style="padding: 5px;">
+		        <div id="inner-message" class="alert alert-error">
+		        	Koodia ei tunnistettu        
+		        </div>
+		    </div>
+		</div>
+	{% else %}
+		<div id="message" style="display:none;">
+		    <div style="padding: 5px;">
+		        <div id="inner-message" class="alert alert-error">        
+		        </div>
+		    </div>
+		</div>
+	{% endif %}
+	<form method="GET" action="/" id="code">
+		<p>1. Posti tarjoaa kotimaan rahti- ja pakettipalvelut sekä varasto- ja toimitusketjuratkaisut kollista kokokuormaan. Minun yrityksessäni käytetään seuraavia palveluja (Postin tai muun toimittamana)</p>
+		&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="question1" value="1">Kotimaan rahtipalvelut<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="question1" value="2">Varasto- ja toimitusketjuratkaisut<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="question1" value="3">Pakettipalvelut<br><br>
+
+		2. <input type="radio" name="question2" value="1">Yritykseni tarvitsee logistiikkapalveluja<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="question2" value="2">Pelaan vain peliä<br><br>
+		<p>3. Yritykseni <br><input type="text" name="name"></p>
+		<p>Sähköpostisoitteeni <br><input type="text" name="email"></p>
+
+		<p>Puhelinnumeroni <br><input type="text" name="phone"><br><br>
+
+		<p>4. Syötä ruudulla näkyvä koodi!</p>
+		<div id="enter-code">
+			<div id="code-form-wrapper">
+					<input type="hidden" name="o" value="f" />
+					<input type="text" name="code" placeholder="Koodi" maxlength="10" /><br><br>
+					<input id="btnRegister" type="submit" value="OK" /><br><br>
+
+					<p>Posti on Suomen Palloliiton virallinen pääyhteistyökumppani ruohonjuuritasolta Huuhkajiin.</p>
+
+					{% if validationErrors.code %}
+						<p class="validation-error"></p>
+					{% endif %}
+			</div>
+		</div>
+	</form>
+	<!-- build:entercode-script -->
+	{% for path in include.entercode.js %}
+	<script type="text/javascript" src="/{{ path }}"></script>
+	{% endfor %}
+	<!-- /build -->
+{% endblock %}

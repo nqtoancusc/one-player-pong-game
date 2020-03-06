@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'SohoGothicProRegular';
+	src: url('/fonts/SohoGothicPro-Regular.eot');
+	src: local('Soho Gothic Pro'), local('SohoGothicPro-Regular'), url('/fonts/SohoGothicPro-Regular.woff') format('woff'), url('/fonts/SohoGothicPro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'SohoGothicProLight';
+	src: url('/fonts/SohoGothicPro-Light.eot');
+	src: local('Soho Gothic Pro'), local('SohoGothicPro-Light'), url('/fonts/SohoGothicPro-Light.woff') format('woff'), url('/fonts/SohoGothicPro-Light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'SohoGothicProMedium';
+	src: url('/fonts/SohoGothicPro-Medium.eot');
+	src: local('Soho Gothic Pro'), local('SohoGothicPro-Medium'), url('/fonts/SohoGothicPro-Medium.woff') format('woff'), url('/fonts/SohoGothicPro-Medium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'SohoGothicProBold';
+	src: url('/fonts/SohoGothicPro-Bold.eot');
+	src: local('Soho Gothic Pro'), local('SohoGothicPro-Bold'), url('/fonts/SohoGothicPro-Bold.woff') format('woff'), url('/fonts/SohoGothicPro-Bold.ttf') format('truetype');
+}

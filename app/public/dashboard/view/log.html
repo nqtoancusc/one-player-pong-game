@@ -1,0 +1,33 @@
+<table class="table table-striped table-hover table-condensed table-responsive">
+	<caption>
+		{{ captions.log }}
+	</caption>
+	<thead>
+		<tr>
+			<td colspan="99">
+				<span data-ng-if="!rows.length">No rows</span>
+				<div pagination-rows="pagination.rows" all-rows="rows" pagination-controls></div>
+			</td>
+		</tr>
+		<tr>
+			<th>ID</th>
+			<th>Session ID</th>
+			<th>Type</th>
+			<th>Group</th>
+			<th>Data</th>
+			<th>Created</th>
+			<th>Options</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr data-ng-repeat="row in pagination.rows.itemsShow" data-id="{{ row.id }}">
+			<td>{{ row.id }}</td>
+			<td>{{ row.session.id }}</td>
+			<td>{{ row.eventType }}</td>
+			<td>{{ row.eventGroup }}</td>
+			<td class="hide-overflow">{{ row.data }}</td>
+			<td>{{ row.createdAt | date:dateFormat }}</td>
+			<td><button type="button" class="btn btn-primary btn-xs">View Session</button></td>
+		</tr>
+	</tbody>
+</table>

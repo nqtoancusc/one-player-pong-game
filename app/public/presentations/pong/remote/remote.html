@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+{% block headerExtra %}
+	<a class="sprite notext off pull-right action-elem click-trigger" href="/" data-val="true" data-subaction="exit" data-signal="remote:exit">Pois</a>
+	<div id="status">
+		<span class="status ready">OK</span>
+		<span class="status wait">ODOTA</span>
+		<span class="status disconnected">X</span>
+		<span class="status error">X</span>
+	</div>
+{% endblock %}
+{% block body %}
+	<!--div id="bat-surface" class="drag-trigger" data-subaction="drag">
+		<div id="bat"></div>
+		<span class="flag finland" style="margin: 15px;"></span>
+	</div-->
+	<div class="wrapper">
+	    <div class="container">
+	        <div id="content">
+	            <div id="play" class="nonselectable">
+	                <div class="controls nonselectable">
+	                    <div class="top">
+	                        <div class="control up nonselectable" id="btnUp"></div>
+	                    </div>
+	                    <div class="bottom nonselectable">
+	                        <div class="control down nonselectable" id="btnDown"></div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>        
+	    </div>
+	</div>
+
+	<!-- build:script pong_remote -->
+	{% for path in include.remote.js %}
+	<script type="text/javascript" src="/{{ path }}"></script>
+	{% endfor %}
+	<!-- /build -->
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+{% endblock %}

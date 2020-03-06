@@ -1,0 +1,30 @@
+<div ng-show="allRows.length" class="pagination-controls">
+	<div>
+		<label>Total rows: {{ allRows.length || 0 }}</label>
+	</div>
+	<div>
+		<label for="show-amount">Display: </label>
+		<select 
+			id="show-amount"
+			name="show-amount"
+			ng-model="paginationRows.itemsPerPage"
+			ng-options="amount for amount in paginationRows.itemsAmounts">
+		</select>
+	</div>
+	<div>
+		<pagination 
+			ng-show="paginationRows.itemsShow.length"
+			boundary-links="true"
+			total-items="allRows.length"
+			items-per-page="paginationRows.itemsPerPage"
+			max-size="paginationRows.maxSize"
+			page="paginationRows.currentPage"
+			class="pagination-sm"
+			boundary-links="true"
+			previous-text="&lsaquo;"
+			next-text="&rsaquo;"
+			first-text="&laquo;"
+			last-text="&raquo;"
+			></pagination>
+	</div>
+</div>

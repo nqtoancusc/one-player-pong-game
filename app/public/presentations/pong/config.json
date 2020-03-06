@@ -1,0 +1,43 @@
+{
+    "schemename": "pong",
+    "include": {
+        "screen": {
+            "js": [
+                "js/jquery-1.11.0.js",
+                "js/jquery-ui-1.10.4.custom.js",
+                "lib/bootstrap-3.1.1/js/bootstrap.js",
+                "lib/qrremote-toolkit/signals-screen.js",
+                "lib/qrremote-toolkit/qr-code.js",
+                "lib/qrremote-toolkit/qr-pong.js",
+                "presentations/pong/screen/js/pong.js",
+                "presentations/pong/screen/js/script.js"
+            ],
+            "css": [
+                "lib/bootstrap-3.1.1/css/bootstrap.css",
+                "presentations/pong/screen/css/font.css",
+                "presentations/pong/screen/css/style.css"
+            ]
+        },
+        "remote": {
+            "js": [
+                "js/jquery-1.11.0.js",
+                "bower_components/hammerjs/hammer.js",
+                "bower_components/jquery-hammerjs/jquery.hammer.js",
+                "lib/qrremote-toolkit/signals-remote.js",
+                "presentations/pong/remote/js/script.js"
+            ],
+            "css": [
+                "presentations/pong/remote/css/style.css"
+            ]
+        },
+        "entercode": {
+            "js": [
+                "js/jquery-1.11.0.js",
+                "presentations/pong/remote/js/entercode-script.js"
+            ],
+            "css": [
+                "presentations/pong/remote/css/style.css"
+            ]
+        }
+    }
+}

@@ -1,0 +1,231 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+		   v2.0 | 20110126
+		   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	background: #72c211 url(/presentations/pong/remote/images/mobile-bg.jpg) 0 0 repeat;
+	font-family: Arial, sans-serif;
+	font-size: 1em/1.5;
+	color: #fff;
+	font-size: 16px;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+input {
+	display: inline-block;
+	font-size: 15px;
+	border: 1px solid #888;
+	padding: 3px;
+}
+	button,
+	input[type='button'],
+	input[type='submit'] {
+		color: #fff;
+		background-color: #f7941e;
+		padding: 5px 30px;
+	}
+
+strong {
+	font-weight: bold;
+}
+
+a {
+	color: blue;
+	font-weight: bold;
+}
+
+p {
+	margin: 10px 0 7px;
+}
+
+h1 {
+	margin: 10px 0 0;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 17px;
+	margin: 8px 0 3px;
+}
+h3 {
+	font-weight: bold;
+	font-size: 1.1em;
+	margin: 8px 0 3px;
+}
+
+#content-wrapper {
+	margin: 20px auto;
+	padding: 0;
+	padding-bottom: 10px;
+	max-width: 600px;
+}
+#header {
+	padding: 0 10px;
+}
+#body {
+	padding: 20px;
+}
+
+#code-form-wrapper {
+	margin: 0 auto;
+}
+	#code-form-wrapper [name='code'] {
+		max-width: 50%;
+	}
+
+.pull-right {
+	float: right;
+}
+
+#status,
+.status					{
+	width: 100px;
+	height: 30px;
+	overflow: hidden;
+	font-weight: bold;
+	font-size: 15px;
+}
+.status.ready			{ color: #060; }
+.status.wait			{ color: #660; }
+.status.error,
+.status.disconnected	{ color: #600; }
+
+.validation-error {
+	color: #ff0000;
+}
+
+#bat-surface {
+	outline: 5px solid #008;
+	margin-top: 20px;
+	width: 200px;
+	min-height: 516px;
+	overflow: hidden;
+	position: relative;
+	text-align: left;
+}
+
+#bat {
+	background-color: #000;
+	width: 20px;
+	height: 100px;
+	position: absolute;
+	left: 90px;
+	top: 208px;
+}
+
+
+#message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#inner-message {
+	padding: 5px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.alert-danger, .alert-error {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+}
+
+/*------------------*/
+
+.wrapper {
+	padding: 10px;
+	text-align: center;
+}
+
+.container {
+}
+
+.controls {
+	margin: 10px;
+	text-align: center;
+	font-size: 0px;
+	touch-action: none;
+	-ms-touch-action: none;
+}
+
+.controls .control {
+	display: inline-block;
+	margin: 5px;
+	width: 110px;
+	height: 110px;
+	background: #fff;
+}
+
+.controls .control.left {
+	background: url('/presentations/pong/remote/images/control-left.png') left bottom no-repeat;
+}
+
+.controls .control.left:hover,
+.controls .control.left:active {
+	background: url('/presentations/pong/remote/images/control_pressed-left.png') left bottom no-repeat;
+}
+
+.controls .control.right {
+	background: url('/presentations/pong/remote/images/control-right.png') left bottom no-repeat;
+}
+
+.controls .control.right:hover,
+.controls .control.right:active {
+	background: url('/presentations/pong/remote/images/control_pressed-right.png') left bottom no-repeat;
+}
+
+.controls .control.up {
+	background: url('/presentations/pong/remote/images/control-up.png') left bottom no-repeat;
+}
+
+.controls .control.up:hover,
+.controls .control.up:active {
+	background: url('/presentations/pong/remote/images/control_pressed-up.png') left bottom no-repeat;
+}
+
+.controls .control.down {
+	background: url('/presentations/pong/remote/images/control-down.png') left bottom no-repeat;
+}
+
+.controls .control.down:hover,
+.controls .control.down:active {
+	background: url('/presentations/pong/remote/images/control_pressed-down.png') left bottom no-repeat;
+}
+
+.nonselectable {
+  -webkit-user-select: none;
+  -khtml-user-drag: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
