@@ -19,11 +19,10 @@ var _ = require('underscore')
 
 var PRODUCTION_HOSTNAME			= '127.0.0.1';
 var PRODUCTION_SCREEN_IP_RANGE	= '';
-var DENISE						= '192.168.200.35';
+var TEST_HOSTNAME				= 'YOUR_TEST_HOSTNAME';
 
-//var DEVELOPMENT_DB_URL			= 'mysql://mfabrik_pong:mfabrik_pong@' + DENISE + '/mfabrik_pong';
 var DEVELOPMENT_DB_URL			= 'mysql://pong_oneplayer:pong_oneplayer@localhost/pong_oneplayer';
-var PRODUCTION_DB_URL			= 'mysql://pong_oneplayer:pong_oneplayer@localhost/pong_oneplayer';
+var PRODUCTION_DB_URL			= 'YOUR_PRODUCTION_DB_URL';
 
 var isDev = !!process.env.DEV;
 
@@ -72,7 +71,7 @@ config.hostname = process.env.HOSTNAME || config.hostname;
 config.orderApiCall = !!process.env.ORDER_API_CALL;
 
 config.dbUrl = !!process.env.LOCAL_DB ? PRODUCTION_DB_URL : config.dbUrl;
-config.dbUrl = process.env.DB === 'DENISE' ? DEVELOPMENT_DB_URL : config.dbUrl;
+config.dbUrl = process.env.DB === TEST_HOSTNAME ? DEVELOPMENT_DB_URL : config.dbUrl;
 
 winston.info('Configured for ' + (isDev ? 'DEV' : 'PROD') + ' environment');
 winston.info('Configuration: ', config);
